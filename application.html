@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TSRTC General Bus Pass Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    .container {
+      background-color: white;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      border: 1px solid #ccc;
+    }
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    fieldset {
+      border: 2px solid #007BFF;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    legend {
+      background: #007BFF;
+      color: white;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .form-group label {
+      width: 180px;
+      padding: 5px 0;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      flex: 1;
+      padding: 5px;
+      margin-right: 10px;
+    }
+    .form-group input[type="radio"] {
+      flex: 0;
+      width: auto;
+    }
+    .captcha-box {
+      text-align: center;
+      margin: 15px 0;
+    }
+    .captcha-text {
+      display: inline-block;
+      background-color: maroon;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      font-size: 20px;
+      letter-spacing: 3px;
+    }
+    .submit-button {
+      text-align: center;
+    }
+    button, input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #FF3B7B;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>TELANGANA STATE ROAD TRANSPORT CORPORATION</h2>
+    <h3>GENERAL BUS PASS APPLICATION</h3>
+
+    <form>
+
+      <!-- Applicant Details -->
+      <fieldset>
+        <legend>Applicant Details</legend>
+
+        <div class="form-group">
+          <label>Name *</label>
+          <input type="text" maxlength="20" required>
+          <label>Father’s / Guardian’s Name *</label>
+          <input type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label>Date of Birth *</label>
+          <input type="date" required>
+          <label>Gender *</label>
+          <input type="radio" name="gender" value="Female"> Female
+          <input type="radio" name="gender" value="Male"> Male
+        </div>
+
+        <div class="form-group">
+          <label>Age As on</label>
+            <input type="number" placeholder="Year(s)" style="width:30px;">
+            <input type="number" placeholder="Month(s)" style="width:30px;">
+            <input type="number" placeholder="Day(s)" style="width:30px;">
+          
+        </div>
+
+        <div class="form-group">
+          <label>WhatsApp No</label>
+          <input type="text">
+          <label>Aadhaar No</label>
+          <input type="text">
+        </div>
+
+        <div class="form-group">
+          <label>Photo</label>
+          <input type="file">
+          <label>Email ID</label>
+          <input type="gmail" placeholder="@gmail.com" style="width:30px;">
+        </div>
+
+      </fieldset>
+
+      <!-- Residential Address Details -->
+      <fieldset>
+        <legend>Residential Address Details</legend>
+
+        <div class="form-group">
+          <label>Applicant’s Address *</label>
+          <textarea maxlength="20" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>District *</label>
+          <input type="text" value="HYDERABAD" required>
+          <label>Mandal *</label>
+          <input type="text" value="HYDERABAD" required>
+        </div>
+
+        <div class="form-group">
+          <label>Village *</label>
+          <input type="text" value="HYDERABAD" required>
+          <label>Pincode *</label>
+          <textarea maxlength="6" required></textarea>
+          
+        </div>
+
+      </fieldset>
+
+      <!-- Pass Type Details -->
+      <fieldset>
+        <legend>Pass Type Details</legend>
+
+        <div class="form-group">
+          <label>City *</label>
+          <select required>
+            <option>Hyderabad</option>
+          </select>
+          <label>Pass Type *</label>
+          <select required>
+            <option>--Select--</option>
+          </select>
+        </div>
+
+      </fieldset>
+
+      <!-- Payment and Collection -->
+      <fieldset>
+        <legend>Mode of Payment & Pass Collection</legend>
+
+        <div class="form-group">
+          <label>Payment Mode *</label>
+          <select required>
+            <option>Select Payment Mode</option>
+          </select>
+          <label>Pass Delivery Mode *</label>
+          <select required>
+            <option>Select Pass Delivery Mode</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Center to Collect Pass *</label>
+          <select required>
+            <option>--Select--</option>
+          </select>
+        </div>
+
+      </fieldset>
+
+      <!-- Captcha -->
+      <div class="captcha-box">
+        <span class="captcha-text">q2@146</span>
+        <button type="button">⟳</button><br><br>
+        <input type="text" placeholder="Enter Captcha" required>
+      </div>
+
+      <!-- Submit -->
+      <div class="submit-button">
+        <input type="submit" value="Submit">
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
